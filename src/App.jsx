@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      {/* <Home /> */}
-      <StoreList />
+      <Home />
+      {/* <StoreList /> */}
     </div>
   );
 }
