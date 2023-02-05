@@ -24,7 +24,7 @@ function UserCard() {
           <p>let’s get stated</p>
         </StyledGreeting>
       </StyledUserInfoBox>
-      <Link to="/signIn">
+      <Link to="/register">
         <StyledButton width="180">Join now</StyledButton>
       </Link>
       <WightButton as="a" href="#" width="180" variant="blue">
