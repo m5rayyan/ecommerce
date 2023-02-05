@@ -7,7 +7,7 @@ import ViewProductPage from "./pages/ViewProductPage/ViewProductPage";
 import CartPage from "./pages/Cart/CartPage";
 
 import { Route, Routes } from "react-router-dom";
-import SignIn from "./pages/Logs/SignIn";
+// import SignIn from "./pages/Logs/SignIn";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signIn" element={<SignIn />} />
+        {/* <Route path="/signIn" element={<SignIn />} /> */}
         <Route path="/storeList" element={<StoreList />} />
         <Route path="/productsPage" element={<ProductsPage />} />
         <Route path="/viewProductPage" element={<ViewProductPage />} />
