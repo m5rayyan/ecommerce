@@ -8,10 +8,10 @@ import { NavIconsBoxStyled } from "./NavIconsBox.style";
 function NavIconsBox() {
   return (
     <NavIconsBoxStyled>
-      <NavIcon Src={profileSvg} IconName="Profile" />
-      <NavIcon Src={messages} IconName="messages" />
-      <NavIcon Src={orders} IconName="orders" />
-      <NavIcon Src={cart} IconName="cart" />
+      <NavIcon test="/cartPage" Src={profileSvg} IconName="Profile" />
+      <NavIcon test="/cartPage" Src={messages} IconName="messages" />
+      <NavIcon test="/cartPage" Src={orders} IconName="orders" />
+      <NavIcon test="/cartPage" Src={cart} IconName="cart" />
     </NavIconsBoxStyled>
   );
 }

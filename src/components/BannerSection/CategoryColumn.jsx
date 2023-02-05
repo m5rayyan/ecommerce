@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   StyledCategoryColumn,
   StyledCategoryLi,
@@ -7,7 +8,7 @@ import {
 } from "./BannerSection.style";
 
 function CategoryColumn() {
-  const test = [
+  const categoryType = [
     "Automobiles",
     "Clothes and wear",
     "Home interiors",
@@ -21,10 +22,12 @@ function CategoryColumn() {
   return (
     <StyledCategoryColumn>
       <StyledCategoryList>
-        {test.map((e) => {
+        {categoryType.map((e) => {
           return (
-            <StyledCategoryLi key={test.indexOf(e)}>
-              <StyledCategoryLink href="#">{e}</StyledCategoryLink>
+            <StyledCategoryLi key={categoryType.indexOf(e)}>
+              <Link to="/productsPage">
+                <StyledCategoryLink href="#">{e}</StyledCategoryLink>
+              </Link>
             </StyledCategoryLi>
           );
         })}

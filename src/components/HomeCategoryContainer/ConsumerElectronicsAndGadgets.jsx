@@ -16,63 +16,78 @@ import ProductInfo from "./ProductInfo";
 
 // ProductList
 function ConsumerElectronicsAndGadgets() {
+  const productsList = [
+    {
+      id: 0,
+      link: "/productsPage",
+      productImg: SmartWatches,
+      productName: "Smart watches",
+      fromPrice: "19",
+    },
+
+    {
+      id: 1,
+      link: "/productsPage",
+      productImg: GoProCameras,
+      productName: "Cameras",
+      fromPrice: "89",
+    },
+    {
+      id: 2,
+      link: "/productsPage",
+      productImg: WightHeadphones,
+      productName: "Headphones",
+      fromPrice: "19",
+    },
+    {
+      id: 3,
+      link: "/productsPage",
+      productImg: CoffeeKeeper,
+      productName: "Coffee keeper",
+      fromPrice: "19",
+    },
+    {
+      id: 4,
+      link: "/productsPage",
+      productImg: Headphones,
+      productName: "Gaming set",
+      fromPrice: "38",
+    },
+    {
+      id: 5,
+      link: "/productsPage",
+      productImg: Laptops,
+      productName: "Laptops & PC",
+      fromPrice: "340",
+    },
+    {
+      id: 6,
+      link: "/productsPage",
+      productImg: Smartphones,
+      productName: "Smartphones",
+      fromPrice: "19",
+    },
+    {
+      id: 7,
+      link: "/productsPage",
+      productImg: ElectricKattle,
+      productName: "Electric kattle",
+      fromPrice: "240",
+    },
+  ];
   return (
     <StyledProductList>
-      <ProductInfo
-        href="#"
-        productImg={SmartWatches}
-        productName="Smart watches"
-        fromPrice="19"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={GoProCameras}
-        productName="Cameras"
-        fromPrice="89"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={WightHeadphones}
-        productName="Headphones"
-        fromPrice="19"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={CoffeeKeeper}
-        productName="Coffee keeper"
-        fromPrice="90"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={Headphones}
-        productName="Gaming set"
-        fromPrice="35"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={Laptops}
-        productName="Laptops & PC"
-        fromPrice="340"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={Smartphones}
-        productName="Smartphones"
-        fromPrice="19"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={ElectricKattle}
-        productName="Electric kattle"
-        fromPrice="240"
-      />
+      {productsList.map((product) => {
+        return (
+          <ProductInfo
+            key={product.id}
+            path={product.link}
+            productImg={product.productImg}
+            productName={product.productName}
+            fromPrice={product.fromPrice}
+          />
+        );
+      })}
     </StyledProductList>
   );
 }

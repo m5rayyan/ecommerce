@@ -10,6 +10,7 @@ import {
 import { WightButton, StyledButton } from "../global/Button/Button.style";
 
 import UserImg from "../../assets/Images/UserImg.png";
+import { Link } from "react-router-dom";
 
 function UserCard() {
   return (
@@ -23,9 +24,9 @@ function UserCard() {
           <p>let’s get stated</p>
         </StyledGreeting>
       </StyledUserInfoBox>
-      <StyledButton as="a" href="#" width="180">
-        Join now
-      </StyledButton>
+      <Link to="/signIn">
+        <StyledButton width="180">Join now</StyledButton>
+      </Link>
       <WightButton as="a" href="#" width="180" variant="blue">
         Learn more
       </WightButton>

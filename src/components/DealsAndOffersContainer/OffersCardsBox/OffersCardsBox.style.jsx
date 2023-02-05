@@ -12,7 +12,7 @@ export const OfferedProductImg = styled.img`
   transition: all 0.3s;
 `;
 
-export const OfferCardStyled = styled.a`
+export const OfferCardStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -10,6 +10,7 @@ import {
 import { WightButton } from "../global/Button/Button.style";
 // Import Banner Image
 import BannerBg from "../../assets/Images/Banner.png";
+import { Link } from "react-router-dom";
 
 function BannerBoard() {
   return (
@@ -18,9 +19,9 @@ function BannerBoard() {
       <StyledBannerInfoBox>
         <StyledLastTrendingTitle>Last trending</StyledLastTrendingTitle>
         <StyledBannerTitle>Electronic items</StyledBannerTitle>
-        <WightButton as="a" href="#" width="112">
-          Learn more
-        </WightButton>
+        <Link to="/storeList">
+          <WightButton width="112">Learn more</WightButton>
+        </Link>
       </StyledBannerInfoBox>
     </StyledBannerBoard>
   );

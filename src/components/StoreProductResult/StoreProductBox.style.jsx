@@ -77,10 +77,12 @@ export const StyledAboutProduct = styled.p`
   max-width: 607px;
   margin-bottom: 10px;
 `;
-export const StyledViewDetails = styled.a`
-  font-weight: 500;
-  line-height: 19px;
-  color: #0d6efd;
+export const StyledViewDetails = styled.div`
+  a {
+    font-weight: 500;
+    line-height: 19px;
+    color: #0d6efd;
+  }
 `;
 export const StyledStoreProductInfoBox = styled.div`
   position: relative;

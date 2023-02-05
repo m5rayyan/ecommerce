@@ -24,7 +24,7 @@ function HeaderLinksBox() {
         <HeaderLinkStyled Href="#">Menu item</HeaderLinkStyled>
       </li>
       <li>
-        <HeaderLinkStyled Href="#">
+        <HeaderLinkStyled>
           Help
           <img src={dropDown} alt="dropDown" />
         </HeaderLinkStyled>

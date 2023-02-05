@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import StyledProductName from "../../global/ProductName/ProductName";
 
 import {
@@ -8,15 +9,17 @@ import {
   StyledOfferedProductImgBox,
 } from "./OffersCardsBox.style";
 function OfferCard(props) {
-  const { href, src, productName, offerAmount } = props;
+  const { path, src, productName, offerAmount } = props;
   return (
-    <OfferCardStyled href={href}>
-      <StyledOfferedProductImgBox>
-        <OfferedProductImg src={src} alt={productName} />
-      </StyledOfferedProductImgBox>
-      <StyledProductName>{productName}</StyledProductName>
-      <OfferAmount>{offerAmount}</OfferAmount>
-    </OfferCardStyled>
+    <Link to={path}>
+      <OfferCardStyled>
+        <StyledOfferedProductImgBox>
+          <OfferedProductImg src={src} alt={productName} />
+        </StyledOfferedProductImgBox>
+        <StyledProductName>{productName}</StyledProductName>
+        <OfferAmount>{offerAmount}</OfferAmount>
+      </OfferCardStyled>
+    </Link>
   );
 }
 

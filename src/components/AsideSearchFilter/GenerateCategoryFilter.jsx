@@ -1,6 +1,6 @@
 import React from "react";
-import AsideSearchList from "./AsideSearchList";
-import SearchLink from "./SearchLink";
+import FilterCategoryList from "./FilterCategoryList";
+import SearchCategoryLi from "./SearchCategoryLi";
 
 function GenerateFilter() {
   const searchFilters = [
@@ -13,28 +13,20 @@ function GenerateFilter() {
         { id: 2, searchHref: "#", searchType: "Smartphones" },
         { id: 3, searchHref: "#", searchType: "Modern tech" },
       ],
-    },
-    {
-      id: 1,
-      title: "Category",
-      about: [
-        { id: 0, searchHref: "#", searchType: "Mobile accessory" },
-        { id: 1, searchHref: "#", searchType: "Electronics" },
-        { id: 2, searchHref: "#", searchType: "Smartphones" },
-        { id: 3, searchHref: "#", searchType: "Modern tech" },
-      ],
+      seeAllHref: "#",
     },
   ];
   return (
-    <div className="TT">
+    <>
       {searchFilters.map((filter) => {
         return (
-          <AsideSearchList
+          <FilterCategoryList
             key={filter.id}
             searchTitle={filter.title}
+            seeAllLink={filter.seeAllHref}
             searchAbout={filter.about.map((cat) => {
               return (
-                <SearchLink
+                <SearchCategoryLi
                   key={cat.id}
                   searchLink={cat.searchHref}
                   searchText={cat.searchType}
@@ -44,7 +36,7 @@ function GenerateFilter() {
           />
         );
       })}
-    </div>
+    </>
   );
 }
 

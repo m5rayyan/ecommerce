@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 function NavIcon(props) {
   return (
-    <NavIconStyled>
-      <img src={props.Src} alt={props.IconName} />
-      <p>{props.IconName}</p>
-    </NavIconStyled>
+    <Link to={props.test}>
+      <NavIconStyled>
+        <img src={props.Src} alt={props.IconName} />
+        <p>{props.IconName}</p>
+      </NavIconStyled>
+    </Link>
   );
 }
 

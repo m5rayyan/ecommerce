@@ -52,9 +52,7 @@ export const StyledProductImg = styled.img`
   height: 82px;
   object-fit: contain;
 `;
-export const StyledProductInfo = styled.a.attrs((props) => ({
-  href: props.href,
-}))`
+export const StyledProductInfo = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 2px 18px 16px;

@@ -1,11 +1,16 @@
 import React from "react";
-import GenerateFilter from "./GenerateFilter";
+import GenerateCategoryFilter from "./GenerateCategoryFilter";
+import GenerateCheckFilter from "./GenerateCheckFilter";
 
 function AsideSearchFilter(props) {
   const { searchTitle, searchAbout } = props;
   return (
     <div className="AsideSearchFilter">
-      <GenerateFilter searchTitle={searchTitle} searchAbout={searchAbout} />
+      <GenerateCategoryFilter
+        searchTitle={searchTitle}
+        searchAbout={searchAbout}
+      />
+      <GenerateCheckFilter />
     </div>
   );
 }

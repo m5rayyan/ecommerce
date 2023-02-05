@@ -10,38 +10,58 @@ import Headphones from "../../../assets/Images/Headphones.png";
 import CanonCameras from "../../../assets/Images/Canon-cameras.png";
 
 function OffersCardsBox() {
+  const productsList = [
+    {
+      id: 0,
+      link: "/viewProductPage",
+      src: SmartWatches,
+      productName: "Smart watches",
+      offerAmount: "-25%",
+    },
+
+    {
+      id: 1,
+      link: "/viewProductPage",
+      src: Laptops,
+      productName: "Laptops",
+      offerAmount: "-15%",
+    },
+    {
+      id: 2,
+      link: "/viewProductPage",
+      src: GoProCameras,
+      productName: "GoPro Cameras",
+      offerAmount: "-40%",
+    },
+    {
+      id: 3,
+      link: "/viewProductPage",
+      src: Headphones,
+      productName: "Headphones",
+      offerAmount: "-25%",
+    },
+    {
+      id: 4,
+      link: "/viewProductPage",
+      src: CanonCameras,
+      productName: "Canon Cameras",
+      offerAmount: "-25%",
+    },
+  ];
+
   return (
     <OffersCardsBoxStyled>
-      <OfferCard
-        href="#"
-        src={SmartWatches}
-        productName="Smart watches"
-        offerAmount="-25%"
-      />
-      <OfferCard
-        href="#"
-        src={Laptops}
-        productName="Laptops"
-        offerAmount="-15%"
-      />
-      <OfferCard
-        href="#"
-        src={GoProCameras}
-        productName="GoPro Cameras"
-        offerAmount="-40%"
-      />
-      <OfferCard
-        href="#"
-        src={Headphones}
-        productName="Headphones"
-        offerAmount="-25%"
-      />
-      <OfferCard
-        href="#"
-        src={CanonCameras}
-        productName="Canon Cameras"
-        offerAmount="-25%"
-      />
+      {productsList.map((product) => {
+        return (
+          <OfferCard
+            key={product.id}
+            path={product.link}
+            src={product.src}
+            productName={product.productName}
+            offerAmount={product.offerAmount}
+          />
+        );
+      })}
     </OffersCardsBoxStyled>
   );
 }

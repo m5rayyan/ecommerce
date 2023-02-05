@@ -14,63 +14,78 @@ import CoffeeMaker from "../../assets/Images/CoffeeMaker.png";
 import ProductInfo from "./ProductInfo";
 // ProductList
 function HomeAndOutdoor() {
+  const productsList = [
+    {
+      id: 0,
+      link: "/viewProductPage",
+      productImg: SoftChairs,
+      productName: "Soft chairs",
+      fromPrice: "19",
+    },
+
+    {
+      id: 1,
+      link: "/viewProductPage",
+      productImg: SofaChair,
+      productName: "Soft & chair",
+      fromPrice: "19",
+    },
+    {
+      id: 2,
+      link: "/viewProductPage",
+      productImg: KitchenDishes,
+      productName: "Kitchen dishes",
+      fromPrice: "19",
+    },
+    {
+      id: 3,
+      link: "/viewProductPage",
+      productImg: Pottery,
+      productName: "Pottery",
+      fromPrice: "19",
+    },
+    {
+      id: 4,
+      link: "/viewProductPage",
+      productImg: KitchenMixer,
+      productName: "Kitchen mixer",
+      fromPrice: "19",
+    },
+    {
+      id: 5,
+      link: "/viewProductPage",
+      productImg: Blenders,
+      productName: "Blenders",
+      fromPrice: "39",
+    },
+    {
+      id: 6,
+      link: "/viewProductPage",
+      productImg: HomeAppliance,
+      productName: "Home appliance",
+      fromPrice: "19",
+    },
+    {
+      id: 7,
+      link: "/viewProductPage",
+      productImg: CoffeeMaker,
+      productName: "Coffee maker",
+      fromPrice: "10",
+    },
+  ];
   return (
     <StyledProductList>
-      <ProductInfo
-        href="#"
-        productImg={SoftChairs}
-        productName="Soft chairs"
-        fromPrice="19"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={SofaChair}
-        productName="Soft & chair"
-        fromPrice="19"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={KitchenDishes}
-        productName="Kitchen dishes"
-        fromPrice="19"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={Pottery}
-        productName="Pottery"
-        fromPrice="19"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={KitchenMixer}
-        productName="Kitchen mixer"
-        fromPrice="100"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={Blenders}
-        productName="Blenders"
-        fromPrice="39"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={HomeAppliance}
-        productName="Home appliance"
-        fromPrice="19"
-      />
-
-      <ProductInfo
-        href="#"
-        productImg={CoffeeMaker}
-        productName="Coffee maker"
-        fromPrice="10"
-      />
+      {productsList.map((product) => {
+        return (
+          <ProductInfo
+            key={product.id}
+            path={product.link}
+            productImg={product.productImg}
+            productName={product.productName}
+            fromPrice={product.fromPrice}
+          />
+        );
+      })}
     </StyledProductList>
   );
 }

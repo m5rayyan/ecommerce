@@ -23,7 +23,7 @@ export const StyledCategoryLi = styled.li`
   border-radius: 6px;
   height: 40px;
 `;
-export const StyledCategoryLink = styled.a`
+export const StyledCategoryLink = styled.div`
   display: flex;
   align-items: center;
   font-weight: 400;

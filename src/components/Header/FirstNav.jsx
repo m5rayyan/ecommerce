@@ -5,13 +5,16 @@ import NavIconsBox from "../NavIconsBox/NavIconsBox";
 import SearchBox from "../SearchBox/SearchBox";
 import logo from "./../../assets/Images/Logo.png";
 import Container from "../global/Container/Container";
+import { Link } from "react-router-dom";
 
 function FirstNav() {
   return (
     <div className="first-nav">
       <Container>
         <FirstNavContentStyled>
-          <Logo src={logo} />
+          <Link to="/">
+            <Logo src={logo} />
+          </Link>
           <SearchBox />
           <NavIconsBox />
         </FirstNavContentStyled>

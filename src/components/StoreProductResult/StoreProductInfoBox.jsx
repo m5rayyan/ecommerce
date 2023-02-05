@@ -18,7 +18,8 @@ import {
 
 import star from "../../assets/Images/Icons/star.svg";
 import emptyStar from "../../assets/Images/Icons/emptyStar.svg";
-import addToCart from "../../assets/Images/Icons/addToCart.svg";
+import saveForLater from "../../assets/Images/Icons/saveForLater.svg";
+import { Link } from "react-router-dom";
 
 function StoreProductInfoBox(props) {
   return (
@@ -60,10 +61,12 @@ function StoreProductInfoBox(props) {
         {props.aboutProduct}
       </StyledAboutProduct>
 
-      <StyledViewDetails href="#">{props.viewDetailsLink}</StyledViewDetails>
+      <StyledViewDetails>
+        <Link to="/viewProductPage">{props.viewDetailsLink}</Link>
+      </StyledViewDetails>
 
       <StyledAddToCartIconBox>
-        <img src={addToCart} alt="" />
+        <img src={saveForLater} alt="Save For Later" />
       </StyledAddToCartIconBox>
     </StyledStoreProductInfoBox>
   );
