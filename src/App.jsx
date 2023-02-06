@@ -16,7 +16,7 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/signIn" element={<SignIn />} />
+        <Route path="/sign" element={<SignIn />} />
         <Route path="/register" element={<Register />} />
         <Route path="/storeList" element={<StoreList />} />
         <Route path="/productsPage" element={<ProductsPage />} />
