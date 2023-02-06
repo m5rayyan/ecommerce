@@ -6,9 +6,9 @@ import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import ViewProductPage from "./pages/ViewProductPage/ViewProductPage";
 import CartPage from "./pages/Cart/CartPage";
 
-import { Route, Routes } from "react-router-dom";
-import SignIn from "./pages/Logs/SignIn";
+// import SignIn from "./pages/Logs/SignIn";
 import Register from "./pages/Logs/Register";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
