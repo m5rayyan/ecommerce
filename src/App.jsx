@@ -5,6 +5,7 @@ import GlobalStyle from "./components/global/GlobalStyle";
 import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import ViewProductPage from "./pages/ViewProductPage/ViewProductPage";
 import CartPage from "./pages/Cart/CartPage";
+
 import SignIn from "./pages/Signs/SignIn";
 import Register from "./pages/Signs/Register";
 
