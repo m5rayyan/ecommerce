@@ -5,9 +5,9 @@ import GlobalStyle from "./components/global/GlobalStyle";
 import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import ViewProductPage from "./pages/ViewProductPage/ViewProductPage";
 import CartPage from "./pages/Cart/CartPage";
+import SignIn from "./pages/Logs/SignIn";
+import Register from "./pages/Logs/Register";
 
-// import SignIn from "./pages/Logs/SignIn";
-// import Register from "./pages/Logs/Register";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Routes>
+        <Route path="/sign" element={<SignIn />} />
         <Route path="/" element={<Home />} />
-        {/* <Route path="/sign" element={<SignIn />} /> */}
-        {/* <Route path="/register" element={<Register />} /> */}
+        <Route path="/register" element={<Register />} />
         <Route path="/storeList" element={<StoreList />} />
         <Route path="/productsPage" element={<ProductsPage />} />
         <Route path="/viewProductPage" element={<ViewProductPage />} />
